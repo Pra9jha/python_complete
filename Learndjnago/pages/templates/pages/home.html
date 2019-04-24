@@ -1,0 +1,23 @@
+{% extends "pages/base.html" %}
+
+ {% block content %}
+     {% include "pages/nav.html" %}
+     <h2>Hello World this is practice page</h2>
+     <p>
+         {{ name }} , {{ company }}
+    <ul> {% for i in mynum %}
+           {% if i == 23 %}
+             <li> {{"numbers :" }} {{ forloop.counter }} --> {{ i }}  res--->>>{{" True"}}</li>
+           {% elif i == 45 %}
+              number is 45
+
+           {% else %}
+             <li> {{"numbers :" }} {{ forloop.counter }} --> {{ i }}</li>
+           {% endif %}
+         {% endfor %}
+    </ul>
+     </p>
+ {% endblock %}
+
+
+
